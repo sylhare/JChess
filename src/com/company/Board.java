@@ -57,7 +57,10 @@ public class Board {
      * A chess coordinate is a letter followed by a number
      *
      * @param input is the text command
-     * @return the clean and parsed output with coordinates
+     * @return the clean and parsed output in an arrayList with
+     *          output[0] = Pawn to be moved
+     *          output[1] = Destination
+     *          output[2] = Other options (take the piece, current position)
      */
     public static ArrayList<String> parse(String input){
         ArrayList<String> output = new ArrayList<>();
@@ -72,6 +75,10 @@ public class Board {
             }
         }*/
         return output;
+    }
+
+    public void move (ChessPawn pawn, String destination, String option){
+
     }
 /*
     private void parsePawn() {

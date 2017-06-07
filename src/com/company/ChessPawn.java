@@ -16,6 +16,7 @@ public class ChessPawn {
         this.color = color;
     }
 
+
     /**
      * Set the position for example "a5" in a chess array
      * from a computer position in a 2D array (from 0 to 7)

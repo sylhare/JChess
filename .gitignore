@@ -13,6 +13,7 @@ $RECYCLE.BIN/
 *.class
 *.xml
 *.groovy
+*.html
 
 # Windows Installer files
 *.cab
