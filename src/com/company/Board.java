@@ -15,6 +15,7 @@ public class Board {
 
     public ArrayList<ChessPawn> white = new ArrayList<>(); //Pawns of the board
     public ArrayList<ChessPawn> black = new ArrayList<>();
+    public ArrayList<String> moves = new ArrayList<>(); //All moves played during the turn
 
     /**
      * Chess Board:
@@ -75,6 +76,25 @@ public class Board {
             }
         }*/
         return output;
+    }
+
+    /**
+     * Check the input if it is a coordinate or not
+     * Coordinates goes from a1 to h8
+     * @param input
+     * @return true or false
+     */
+    public static boolean isCoordinate (String input) {
+        boolean result = false;
+        String str = input.toLowerCase().trim();
+        if (str.length() == 2){
+            if('a' <= str.charAt(0) && str.charAt(0) <= 'h' && '1' <= str.charAt(1) && str.charAt(1) <= '8'){
+            //if(Character.toString(str.charAt(0)).matches("[a-h]") && Character.toString(str.charAt(1)).matches("[1-8]")){ //slower
+                result = true;
+            }
+        }
+
+        return result;
     }
 
     public void move (ChessPawn pawn, String destination, String option){

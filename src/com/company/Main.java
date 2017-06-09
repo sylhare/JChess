@@ -24,6 +24,12 @@ public class Main {
         Board b = new Board();
         System.out.println(b.parse("test,a2;b4 finish"));
 
+        System.out.println(Board.isCoordinate("00"));
+
+        if ('8' < '1'){
+            System.out.print("SUCCESS");
+        }
+
         Board.printChessDemo();
         System.out.println(ChessRules.Variable.getAllNames());
 

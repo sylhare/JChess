@@ -9,7 +9,7 @@ import java.util.Collections;
  */
 public class ChessRules {
     static String[] LETTERS = {"a", "b", "c", "d", "e", "f", "g", "h"};
-    static String DELIMS = "[^a-h1-8]";
+    static String DELIMS = "[^a-h1-8]"; //Regex not between a to h or 1 to 8
 
     /**
      * Variable enum in the ChessRules class

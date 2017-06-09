@@ -41,17 +41,30 @@ I will put here the main characteristics that will be used by the program
 	- Bxe5 or B:e5 or Be5: : Bishop capture the piece on e5
 	- exd6e.p. : pawn in e capturing another pawn *en passant* resulting in it going to d6.
 - **Disambiguating moves**
-	- 
+	- Ngf3 : Indicate the letter (referred as *file*) of the source case (knight in g to f3).
+	- N5f3 : If not enough, use the number (referred as *rank*) of the souce case (knight in 5 to f3)
+	- Qd5f3 : If the above is not enough (when with multiple pawn promotion for example: Queen in d5 to f3)
+	- The capture indication should be placed in between the coordinates
 - **Pawn Promotion**
-- **Draw offer**
+	- e8Q or e8=Q : Pawn moved to e8 and got promoted to Queen 
+- **Draw offer** *Not part of the Notation*
+	- (=) : Submitting a draw offer to the oponent 
 - **Castling**
+	- 0-0 : Means castling toward the king side
+	- 0-0-0 : Means castling toward the Queen side
 - **Check**
+	- † or + : to indicate the opponent's king is in check
 - **Checkmate**
+	- ‡ or # or ≠ : to indicate chekmate
 - **End of game**
+	- 1-0 : the white side won
+	- 0-1 : the black side won
+	- ½–½ : it's a draw
 
 ### Simplified Notation
 It's a home made simplified notation that I'll detail here. Here is how it works:
 
+- **Movements**
 - Piece: position -> destination comments 
 - Piece position destination comments
 
