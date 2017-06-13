@@ -1,8 +1,11 @@
 package com.company;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Scanner;
 
 /**
  * Created by Sylhare on 2017-05-10.
@@ -10,6 +13,97 @@ import java.util.Collections;
 public class ChessRules {
     static String[] LETTERS = {"a", "b", "c", "d", "e", "f", "g", "h"};
     static String DELIMS = "[^a-h1-8]"; //Regex not between a to h or 1 to 8
+
+    /**
+     * Give help on how to help the game when called
+     */
+    public static void help(String input) {
+        switch (input) {
+            case "check":
+                helpCheck();
+                break;
+            case "moves":
+                helpMoves();
+                break;
+            case "capture":
+                helpCapture();
+                break;
+            case "castling":
+                helpCastling();
+                break;
+            case "draw offer":
+                helpDrawOffer();
+                break;
+            case "pawn promotion":
+                helpPawnPromotion();
+                break;
+            default:
+                System.out.println("Invalid choice");
+                break;
+        }
+    }
+
+    /**
+     * Help on Check and Checkmate
+     */
+    public static void helpCheck(){
+
+    }
+
+    /**
+     * Help on moves
+     */
+    public static void helpMoves(){
+
+    }
+
+    /**
+     * Help on capture
+     */
+    public static void helpCapture(){
+
+    }
+
+    /**
+     * Help on castling
+     */
+    public static void helpCastling(){
+
+    }
+
+    /**
+     * help on draw offer
+     */
+    public static void helpDrawOffer(){
+
+    }
+
+    /**
+     * Help on pawn promotion
+     */
+    public static void helpPawnPromotion(){
+
+    }
+
+    /**
+     * return the text of a text file
+     *
+     * @param path
+     * @return
+     */
+    public static String getTextFile(String path){
+        String text="";
+        try {
+            Scanner file = new Scanner(new File(path));
+            while (file.hasNextLine()){
+                text += "/n"+ file.nextLine();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return text;
+    }
 
     /**
      * Variable enum in the ChessRules class

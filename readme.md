@@ -20,7 +20,7 @@ Castling is when King goes to the available case of its color before an untouche
 
 A pawn becomes Queen if they reach the other hand of the board.
 
-### En passant
+#### En passant
 Pawn can advance two cases when first move.
 
 *En passant* is a way to capture a pawn right after it mades its two cases move, going diagonal behind it with another pawn.
@@ -65,13 +65,12 @@ I will put here the main characteristics that will be used by the program
 It's a home made simplified notation that I'll detail here. Here is how it works:
 
 - **Movements**
-- Piece: position -> destination comments 
-- Piece position destination comments
+- Pawn's type: position -> destination comments 
+- Pawn's type: position destination comments
 
-The comments/action can be a castling, indicating a check or a checkmate (that will need to be confirmed), offer a draw. 
+The comments/action can be a castling (king or queen side), indicating a check or a checkmate (that will need to be confirmed), offer a draw. 
 
-
-## Documentation
+## Java Documentation
 
 ### Parsing
 

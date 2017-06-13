@@ -1,9 +1,12 @@
 package com.company;
 
-//import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by sylhare on 2017-05-03.
@@ -100,7 +103,7 @@ public class Board {
     public void move (ChessPawn pawn, String destination, String option){
 
     }
-/*
+
     private void parsePawn() {
         String text = "I will come and meet you at the woods 123woods and all the woods";
 
@@ -113,5 +116,7 @@ public class Board {
             System.out.println(matcher.group(1));
         }
     }
-*/
+
+
+
 }

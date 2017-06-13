@@ -11,7 +11,7 @@ $RECYCLE.BIN/
 # Some IDE and java auto generated files
 *.iml
 *.class
-*.xml
+.idea/*.xml
 *.groovy
 *.html
 
