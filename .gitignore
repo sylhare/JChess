@@ -55,3 +55,6 @@ Temporary Items
 jchess-maven/.idea/**
 jchess-1/.idea/**
 .idea/*
+jchess-gradle/.gradle/**
+jchess-gradle/.idea/**
+target/**
