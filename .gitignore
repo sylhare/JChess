@@ -54,3 +54,4 @@ Temporary Items
 .apdisk
 jchess-maven/.idea/**
 jchess-1/.idea/**
+.idea/*
