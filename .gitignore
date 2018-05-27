@@ -1,3 +1,10 @@
+# =========================
+# Operating System Files
+# =========================
+
+# Windows
+# =========================
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -8,13 +15,6 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
-# Some IDE and java auto generated files
-*.iml
-*.class
-.idea/*.xml
-*.groovy
-*.html
-
 # Windows Installer files
 *.cab
 *.msi
@@ -24,9 +24,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# =========================
-# Operating System Files
-# =========================
 
 # OSX
 # =========================
@@ -52,9 +49,21 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-jchess-maven/.idea/**
-jchess-1/.idea/**
+
+
+# =========================
+# IDE
+# =========================
+
+# IntelliJ
+# =========================
+
+# Some IDE and java auto generated files
+*.iml
+*.class
 .idea/*
-jchess-gradle/.gradle/**
-jchess-gradle/.idea/**
-target/**
+**/.idea/**
+
+target/*
+jchess/target/*
+jchess/project/target/*
