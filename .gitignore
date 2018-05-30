@@ -67,3 +67,5 @@ Temporary Items
 target/*
 jchess/target/*
 jchess/project/target/*
+*/.gradle/*
+*/build/*
