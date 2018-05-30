@@ -2,7 +2,7 @@ package com.github.sylhare
 
 import cucumber.api.scala.{EN, ScalaDsl}
 
-class Steps extends ScalaDsl with EN {
+class StepsScala extends ScalaDsl with EN {
 
   var chess: ChessBoard = _
   var result: String = _
