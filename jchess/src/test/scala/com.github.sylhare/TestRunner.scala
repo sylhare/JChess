@@ -8,8 +8,7 @@ import org.junit.runner.RunWith
 @RunWith(classOf[Cucumber])
 @CucumberOptions(
   features = Array("classpath:features"),
-  glue = Array("classpath:steps"),
-  tags = Array("@wip"),
+  glue = Array("classpath:com.github.sylhare"),
   monochrome = true,
   plugin = Array("pretty",
     "html:target/cucumber",
