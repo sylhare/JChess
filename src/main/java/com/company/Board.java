@@ -37,7 +37,7 @@ public class Board {
      *
      */
     public static void printChessDemo(){
-        System.out.print("*      a  b  c  d  e  f  g  h\n*\n");
+        System.out.print("* Chess Board:\n*\n*      a  b  c  d  e  f  g  h\n*\n");
         for (int i = 8; i > 0; i-- ) {
             System.out.print("*  " + i + "   ");
             for(String letter : ChessRules.LETTERS){
