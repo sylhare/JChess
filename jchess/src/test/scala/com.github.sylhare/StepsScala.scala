@@ -7,7 +7,7 @@ class StepsScala extends ScalaDsl with EN {
   var chess: ChessBoard = _
   var result: String = _
 
-  Given("^A game of chess$") { () =>
+  Given("^A simple game of chess$") { () =>
     chess = new ChessBoard()
   }
 
