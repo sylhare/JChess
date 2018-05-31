@@ -1,18 +1,27 @@
 package com.github.sylhare;
 
+import org.junit.*;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 import static org.junit.Assert.*;
 
 public class ChessBoardTest {
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
 
-    @org.junit.Before
+    @Before
     public void setUp() throws Exception {
+        System.setOut(new PrintStream(outContent));
+        System.setErr(new PrintStream(errContent));
         ChessBoard chess = new ChessBoard();
     }
 
 
-    @org.junit.Test
+    @Test
     public void printChessCoordinates() throws Exception {
-        String coordinates = ChessBoard.printChessCoordinates();
+        String coordinates = ChessBoard.getChessCoordinates();
         assertEquals(coordinates, "* Chess ChessBoard:\n" +
                                         "*\n" +
                                         "*      a  b  c  d  e  f  g  h\n" +
@@ -25,5 +34,23 @@ public class ChessBoardTest {
                                         "*  3   a3 b3 c3 d3 e3 f3 g3 h3 \n" +
                                         "*  2   a2 b2 c2 d2 e2 f2 g2 h2 \n" +
                                         "*  1   a1 b1 c1 d1 e1 f1 g1 h1 \n");
+    }
+
+    @Test
+    public void out() {
+        System.out.print("hello");
+        assertEquals("hello", outContent.toString());
+    }
+
+    @Test
+    public void err() {
+        System.err.print("hello again");
+        assertEquals("hello again", errContent.toString());
+    }
+
+    @After
+    public void restoreStreams() {
+        System.setOut(System.out);
+        System.setErr(System.err);
     }
 }

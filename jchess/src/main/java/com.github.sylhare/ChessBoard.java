@@ -5,7 +5,7 @@ public class ChessBoard {
     /**
      * Print the default chess coordinates
      */
-    public static String printChessCoordinates(){
+    public static String getChessCoordinates(){
         String coordinates = "* Chess ChessBoard:\n*\n*      a  b  c  d  e  f  g  h\n*\n";
         for (int i = 8; i > 0; i-- ) {
             coordinates += "*  " + i + "   ";
@@ -14,11 +14,12 @@ public class ChessBoard {
             }
             coordinates += "\n";
         }
-        System.out.println(coordinates);
         return coordinates;
     }
 
     public String CheckBoard(){
-        return ChessBoard.printChessCoordinates();
+        String coordinates = ChessBoard.getChessCoordinates();
+        ChessDisplayer.print(coordinates);
+        return coordinates;
     }
 }
