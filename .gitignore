@@ -69,3 +69,4 @@ jchess/target/*
 jchess/project/target/*
 */.gradle/*
 */build/*
+jchess/cucumber/node_modules/*
