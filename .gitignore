@@ -74,3 +74,4 @@ jchess/out/*
 /out/
 /build/
 /.gradle/
+cucumber/node_modules/*

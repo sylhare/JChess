@@ -69,7 +69,6 @@ buildscript {
 apply plugin: 'com.moowork.node'
 
 task cucumberReportInstall(type: NpmTask) {
-    // install the express package only
     args = ['install', 'cucumber/']
 }
 

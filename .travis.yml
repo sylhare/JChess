@@ -1,7 +1,26 @@
 language: java
 sudo: false # faster builds
 
-script: "mvn cobertura:cobertura"
+before_install:
+  - "nvm install stable"
 
-after_success:
-- bash <(curl -s https://codecov.io/bash) #-t repository-upload-token here public so not required
+install:
+  - "npm install"
+  - "gradle cucumberReportInstall"
+
+before_script:
+  - "echo ------ before ------"
+  - "pwd"
+  - "echo --------------------"
+
+script:
+  - "echo success!"
+  - "echo ------ script ------"
+  - "pwd"
+  - "echo --------------------"
+
+after_script:
+  - "echo ------ after  ------"
+  - "pwd"
+  - "echo --------------------"
+
