@@ -66,10 +66,11 @@ Temporary Items
 
 target/*
 jchess/target/*
-*/.gradle/*
-*/build/*
 jchess/cucumber/node_modules/*
 jchess/out/*
 /jchess/project/
 /jchess/build/*
 /jchess/.gradle/*
+/out/
+/build/
+/.gradle/

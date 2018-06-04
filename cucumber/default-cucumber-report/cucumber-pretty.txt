@@ -1,0 +1,10 @@
+Feature: Chess
+
+  Scenario: Display the Chess Board [90m# ./src/test/resources/features/Chess.feature:3[0m
+    [32mGiven [0m[32mA simple game of chess[0m    [90m# Steps.a_game_of_chess()[0m
+    [33mWhen [0m[33mI check the the board[0m      [90m# Steps.i_check_the_the_board()[0m
+      [33mcucumber.api.PendingException: TODO: implement me
+	at com.github.sylhare.Steps.i_check_the_the_board(Steps.java:23)
+	at ✽.I check the the board(./src/test/resources/features/Chess.feature:5)
+[0m
+    [36mThen [0m[36mthe board is displayed[0m     [90m# Steps.the_board_is_displayed()[0m

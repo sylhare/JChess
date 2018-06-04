@@ -1,6 +1,0 @@
-Feature: Chess
-
-  Scenario: Display the Chess Board [90m# ./src/test/resources/features/Chess.feature:3[0m
-    [33mGiven [0m[33mA simple game of chess[0m    [90m# null[0m
-    [33mWhen [0m[33mI check the the board[0m      [90m# null[0m
-    [33mThen [0m[33mthe board is displayed[0m     [90m# null[0m

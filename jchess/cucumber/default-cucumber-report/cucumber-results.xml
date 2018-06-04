@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="1" time="0.011201">
-<testcase classname="Chess" name="Display the Chess Board" time="0.011201">
-<skipped><![CDATA[Given A simple game of chess................................................undefined
-When I check the the board..................................................undefined
-Then the board is displayed.................................................undefined
-]]></skipped>
-</testcase>
-</testsuite>

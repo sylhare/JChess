@@ -1,4 +1,4 @@
-package com.company;
+package legacy;
 
 import org.apache.commons.lang3.StringUtils;
 

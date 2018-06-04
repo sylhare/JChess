@@ -1,4 +1,4 @@
-package com.company;
+package legacy;
 
 /**
  * The ChessPawn class is used to define the pawns of a board

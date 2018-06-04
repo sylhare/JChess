@@ -1,4 +1,4 @@
-package com.company;
+package legacy;
 
 /*
 import java.util.ArrayList;

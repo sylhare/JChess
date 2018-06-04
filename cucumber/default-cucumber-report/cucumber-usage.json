@@ -1,0 +1,20 @@
+[
+  {
+    "source": "^A simple game of chess$",
+    "steps": [
+      {
+        "name": "A simple game of chess",
+        "aggregatedDurations": {
+          "average": 0.08969127,
+          "median": 0.08969127
+        },
+        "durations": [
+          {
+            "duration": 0.08969127,
+            "location": "./src/test/resources/features/Chess.feature:4"
+          }
+        ]
+      }
+    ]
+  }
+]
