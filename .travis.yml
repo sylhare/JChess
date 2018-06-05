@@ -2,25 +2,26 @@ language: java
 sudo: false # faster builds
 
 before_install:
-  - "nvm install stable"
+  - nvm install stable
+  - sudo apt-get install jq  # For Codacy
+  - wget -O ~/codacy-coverage-reporter-assembly-latest.jar $(curl https://api.github.com/repos/codacy/codacy-coverage-reporter/releases/latest | jq -r .assets[0].browser_download_url)
+
 
 install:
-  - "npm install"
-  - "gradle cucumberReportInstall"
+  - npm install
+  - gradle cucumberReportInstall
 
 before_script:
   - "echo ------ before ------"
-  - "pwd"
-  - "echo --------------------"
 
 script:
-  - "echo success!"
-  - "echo ------ script ------"
-  - "pwd"
-  - "echo --------------------"
+  - gradle check
+  - gralde cucumberReport
 
 after_script:
-  - "echo ------ after  ------"
-  - "pwd"
-  - "echo --------------------"
+  - gradle test jacocoTestReport
+  - gradle cucumberReport
 
+after_success:
+  - bash <(curl -s https://codecov.io/bash) # For Codecov.io
+  - java -jar ~/codacy-coverage-reporter-assembly-latest.jar report -l Java -r build/reports/jacoco/test/jacocoTestReport.xml # Codacy coverage

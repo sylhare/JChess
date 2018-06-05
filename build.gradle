@@ -75,3 +75,14 @@ task cucumberReportInstall(type: NpmTask) {
 task cucumberReport(type: NodeTask) {
     script = file('cucumber/index.js')
 }
+
+
+/* For code coverage */
+apply plugin: 'jacoco'
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled true
+    }
+}
