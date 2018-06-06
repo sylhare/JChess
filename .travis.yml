@@ -1,6 +1,11 @@
 language: java
 sudo: false # faster builds
 
+env:
+  global:
+    - secure: "rKT8QWcOvYxCcyChF0sFqppRT7zadIHMZgHwBXOAeRdCRGiG2KxqflkG2WAaTOjei99SZXvtWBmZbWcfxLOCp2Je6szqL14rlSB9VK2uvw3ipGqm2KEbT+gRvQagXvYEJtZo40lXZEZGcuTO6hACl5PFryBjKG+7nr+jv8VeB/pPQHdAsATylxGUFXNROOBJ4ia8ATQZozBHFNflDpPE0MYinIGIN7af2xrz8S9TVdmV3rXMkHf2R6A5v5WNm2JGnBsyzoGATUA3O5YNwXMiqBf07YR95K6UEtLlBWC/qsU1aSQfPTDpVOf6dydbpejVC0asE2IYcEUFLTt0FYB8ydu5jFSc9aCqmTxpVpqd0/ZPJwV79LyZEygUO2F10ZbcJhGLIkA5BA94wK9ZKiONC3/Xr/sn1ZUJLWDLlWdHPioTCvxpsSUWoFMRByGC8kG8GiEQWPpPp3szkxpS4jx109rvPuMVHC1/Q7FPCaIgD+qcgagfChOvjtV1U8smauaz90eOnyLSh4h2fQW/thjsD2dJjNdvrYLvrRBdv87S72uio4m36kAjlLIxOMQwGShA3CahIOKAlKg3DWtGeMrS+Br1uoUoG7+fGeby07VjIv6Bwi3WV4QaU7tMAVi7eYDpwhOHfs3Sj4ubecpgWvGEf3zkKzYHDJu/5mXrkCEXcHI="
+
+
 before_install:
   - nvm install stable
   - sudo apt-get install jq  # For Codacy
@@ -16,7 +21,7 @@ before_script:
 
 script:
   - gradle check
-  - gralde cucumberReport
+#  - gradle cucumberReport  # To display the report in the browser
 
 after_script:
   - gradle test jacocoTestReport
