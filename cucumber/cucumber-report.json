@@ -12,7 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 89691270,
+              "duration": 117475104,
               "status": "passed"
             },
             "line": 4,
@@ -25,7 +25,7 @@
           {
             "result": {
               "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat com.github.sylhare.Steps.i_check_the_the_board(Steps.java:23)\n\tat ✽.I check the the board(./src/test/resources/features/Chess.feature:5)\n",
-              "duration": 1537707,
+              "duration": 1614290,
               "status": "pending"
             },
             "line": 5,

@@ -275,7 +275,7 @@ pre {
 
     <div class="container">
 
-      <div class="generated-on">Thu May 31 2018 09:01:12 GMT-0400 (EDT)</div>
+      <div class="generated-on">Tue Jun 05 2018 13:36:16 GMT-0400 (EDT)</div>
 
       <div class="row">
         <div class="chart col-lg-6 col-md-6" id="piechart_features"></div>
@@ -368,8 +368,8 @@ pre {
                         <span class="label-container">
               
               
-              <span class="label label-info" title="1 Scenarios Undefined">1</span>
               
+              <span class="label label-default" title="1 Scenarios Pending">1</span>
               
               
             </span>
@@ -388,17 +388,17 @@ pre {
                                 <a data-toggle="collapse" href="#collapseScenariodefault0_0">
                                     <div>
 
-                                        <div style="padding-right: 30px">
+                                        <div style="padding-right: 70px">
                                             <i class="glyphicon glyphicon-chevron-right"></i>
                                             <i class="glyphicon glyphicon-chevron-down"></i>
                                             <b>Scenario:</b>Display the Chess Board
                                         </div>
                                         <div>
                             <span class="label-container">
+                              <span class="label label-success" title="1 Steps Passed">1</span>
                               
-                              <span class="label label-info" title="3 Steps Undefined">3</span>
-                              
-                              
+                              <span class="label label-default" title="1 Steps Pending">1</span>
+                              <span class="label label-warning" title="1 Steps Skipped">1</span>
                               
                               
                             </span>
@@ -416,7 +416,7 @@ pre {
                                 <div class="row steps">
                                     
                                     
-                                    <span class="label label-info" title="Undefined"><i class="glyphicon glyphicon-flash"></i></span>
+                                    <span class="label label-success" title="Success"><i class="glyphicon glyphicon-ok"></i></span>
                                     
                                     
                                     <span class="text">
@@ -424,19 +424,12 @@ pre {
                           <span> A simple game of chess</span>
                           
                               <span class="step-duration">
-                               0s
+                               167ms
                               </span>
                             
                          
                       </span>
                                     
-                                    
-                                    <pre class=info>
-<br>Then(/^A simple game of chess$/, function(callback) {
-  // Write code here that turns the phrase above into concrete actions
-  callback(null, 'pending');
-});
-                        </pre>
                                     
 
                                     
@@ -455,7 +448,7 @@ pre {
                                 <div class="row steps">
                                     
                                     
-                                    <span class="label label-info" title="Undefined"><i class="glyphicon glyphicon-flash"></i></span>
+                                    <span class="label label-default" title="Pending"><i class="glyphicon glyphicon-exclamation-sign"></i></span>
                                     
                                     
                                     <span class="text">
@@ -463,21 +456,22 @@ pre {
                           <span> I check the the board</span>
                           
                               <span class="step-duration">
-                               0s
+                               3ms
                               </span>
                             
                          
                       </span>
                                     
                                     
-                                    <pre class=info>
-<br>Then(/^I check the the board$/, function(callback) {
-  // Write code here that turns the phrase above into concrete actions
-  callback(null, 'pending');
-});
-                        </pre>
-                                    
 
+                                    
+                                    <a href="#error0_01" data-toggle="collapse">+ Show Error</a>
+                                    <div id="error0_01" class="collapse">
+                                        <pre class=info>cucumber.api.PendingException: TODO: implement me
+	at com.github.sylhare.Steps.i_check_the_the_board(Steps.java:23)
+	at ✽.I check the the board(./src/test/resources/features/Chess.feature:5)
+</pre>
+                                    </div>
                                     
 
                                     
@@ -494,7 +488,7 @@ pre {
                                 <div class="row steps">
                                     
                                     
-                                    <span class="label label-info" title="Undefined"><i class="glyphicon glyphicon-flash"></i></span>
+                                    <span class="label label-warning" title="Skipped"><i class="glyphicon glyphicon-minus"></i></span>
                                     
                                     
                                     <span class="text">
@@ -508,13 +502,6 @@ pre {
                          
                       </span>
                                     
-                                    
-                                    <pre class=info>
-<br>Then(/^the board is displayed$/, function(callback) {
-  // Write code here that turns the phrase above into concrete actions
-  callback(null, 'pending');
-});
-                        </pre>
                                     
 
                                     
@@ -573,8 +560,8 @@ pre {
                                                             "title" : "Scenarios",
                                                             "failed" : 0,
                                                             "passed" : 0,
-                                                            "notdefined" : 1,
-                                                            "pending" : 0,
+                                                            "notdefined" : 0,
+                                                            "pending" : 1,
                                                             "skipped" : 0,
                                                             "ambiguous" : 0
                                                         })

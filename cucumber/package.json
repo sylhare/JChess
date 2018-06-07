@@ -21,5 +21,6 @@
   "homepage": "https://github.com/Sylhare/JChess#readme",
   "devDependencies": {
     "cucumber-html-reporter": "^4.0.2"
-  }
+  },
+  "dependencies": {}
 }
