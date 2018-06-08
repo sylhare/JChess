@@ -5,12 +5,12 @@
       {
         "name": "A simple game of chess",
         "aggregatedDurations": {
-          "average": 0.117475104,
-          "median": 0.117475104
+          "average": 0.1277108,
+          "median": 0.1277108
         },
         "durations": [
           {
-            "duration": 0.117475104,
+            "duration": 0.1277108,
             "location": "./src/test/resources/features/Chess.feature:4"
           }
         ]
