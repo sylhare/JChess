@@ -19,6 +19,8 @@ apply plugin: 'com.moowork.node'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
+configurations { codacy }
+
 project.ext {
     cucumberVersion = '2.3.1'
     junitVersion = '4.12'
@@ -32,10 +34,12 @@ dependencies {
     testCompile 'io.cucumber:cucumber-java:' + cucumberVersion
     testCompile 'io.cucumber:cucumber-junit:' + cucumberVersion
     testCompile 'junit:junit:' + junitVersion
+    codacy 'com.github.codacy.codacy-coverage-reporter:codacy-coverage-reporter:4.0.1'
 }
 
 repositories {
     mavenCentral()
+    maven { url "https://jitpack.io" }
 }
 
 test {
@@ -75,3 +79,14 @@ jacocoTestReport {
     }
 }
 
+task sendCoverageToCodacy(type: JavaExec, dependsOn: jacocoTestReport) {
+    main = "com.codacy.CodacyCoverageReporter"
+    classpath = configurations.codacy
+    args = [
+            "report",
+            "-l",
+            "Java",
+            "-r",
+            "${buildDir}/reports/jacoco/test/jacocoTestReport.xml"
+    ]
+}
