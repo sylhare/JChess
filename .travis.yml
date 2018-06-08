@@ -7,8 +7,8 @@ env:
 
 
 before_install:
-  - nvm install stable
-  - sudo apt-get install jq  # For Codacy
+  - nvm install stable                       # To install npm
+  - sudo apt-get install jq                  # For Codacy
   - wget -O ~/codacy-coverage-reporter-assembly-latest.jar $(curl https://api.github.com/repos/codacy/codacy-coverage-reporter/releases/latest | jq -r .assets[0].browser_download_url)
 
 
@@ -16,17 +16,14 @@ install:
   - npm install
   - gradle cucumberReportInstall
 
-before_script:
-  - "echo ------ before ------"
-
 script:
   - gradle check
-#  - gradle cucumberReport  # To display the report in the browser
+  - gradle clean build
 
 after_script:
   - gradle test jacocoTestReport
   - gradle cucumberReport
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash) # For Codecov.io
-  - java -jar ~/codacy-coverage-reporter-assembly-latest.jar report -l Java -r build/reports/jacoco/test/jacocoTestReport.xml # Codacy coverage
+  - bash <(curl -s https://codecov.io/bash)   # For Codecov.io
+  - java -jar ~/codacy-coverage-reporter-assembly-latest.jar report -l Java -r build/reports/jacoco/test/jacocoTestReport.xml   # Codacy coverage
