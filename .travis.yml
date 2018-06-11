@@ -15,13 +15,11 @@ install:
   - gradle cucumberReportInstall
 
 script:
-  - gradle check
   - gradle clean build
-
-after_script:
-  - gradle test jacocoTestReport
-  - gradle cucumberReport
+  - gradle test
+  - gradle jacocoTestReport                   # For code coverage
+  - gradle cucumberReport                     # To generate cucumber report
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)   # For Codecov.io
-  - gradle sendCoverageToCodacy
+  - bash <(curl -s https://codecov.io/bash)   # For Codecov with secure token
+  - gradle sendCoverageToCodacy               # For Codacy with secure token
