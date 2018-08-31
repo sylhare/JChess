@@ -90,3 +90,7 @@ task sendCoverageToCodacy(type: JavaExec, dependsOn: jacocoTestReport) {
             "${buildDir}/reports/jacoco/test/jacocoTestReport.xml"
     ]
 }
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.8'
+}

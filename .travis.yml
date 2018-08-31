@@ -15,8 +15,7 @@ install:
   - gradle cucumberReportInstall
 
 script:
-  - gradle clean build
-  - gradle test
+  - gradle clean build test
   - gradle jacocoTestReport                   # For code coverage
   - gradle cucumberReport                     # To generate cucumber report
 
