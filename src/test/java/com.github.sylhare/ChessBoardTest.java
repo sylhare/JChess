@@ -1,20 +1,38 @@
 package com.github.sylhare;
 
 import org.junit.*;
+import org.junit.rules.TestName;
+import org.junit.rules.TestRule;
+import org.junit.rules.TestWatcher;
+import org.junit.runner.Description;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.PrintStream;
+import java.text.DecimalFormat;
 
 import static org.junit.Assert.*;
 
+
 public class ChessBoardTest {
-    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+    //private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    //private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+
+    /*@Rule
+    public TestRule watcher = new TestWatcher() {
+        protected void starting(Description description) {
+            System.out.println("TEST : " + description.getClassName() +" : " + description.getMethodName());
+        }
+    };*/
+    @Rule
+    public JUnitPrinterRule pr = new JUnitPrinterRule(System.out);
 
     @Before
     public void setUp() throws Exception {
-        System.setOut(new PrintStream(outContent));
-        System.setErr(new PrintStream(errContent));
+        //System.setOut(new PrintStream(outContent));
+        //System.setErr(new PrintStream(errContent));
         ChessBoard chess = new ChessBoard();
     }
 
@@ -38,19 +56,19 @@ public class ChessBoardTest {
 
     @Test
     public void out() {
-        System.out.print("hello");
-        assertEquals("hello", outContent.toString());
+        //System.out.print("hello");
+        //assertEquals("hello", outContent.toString());
     }
 
     @Test
     public void err() {
-        System.err.print("hello again");
-        assertEquals("hello again", errContent.toString());
+        //System.err.print("hello again");
+        //assertEquals("hello again", errContent.toString());
     }
 
     @After
     public void restoreStreams() {
-        System.setOut(System.out);
-        System.setErr(System.err);
+        //System.setOut(System.out);
+        //System.setErr(System.err);
     }
 }
