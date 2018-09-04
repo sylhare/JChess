@@ -76,3 +76,4 @@ jchess/out/*
 cucumber/node_modules/*
 /gradle/*
 /cucumber/default-cucumber-report/*
+/jacoco/
