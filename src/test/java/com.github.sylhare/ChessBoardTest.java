@@ -1,74 +1,66 @@
 package com.github.sylhare;
 
-import org.junit.*;
-import org.junit.rules.TestName;
-import org.junit.rules.TestRule;
-import org.junit.rules.TestWatcher;
-import org.junit.runner.Description;
-import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.PrintStream;
-import java.text.DecimalFormat;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 
 public class ChessBoardTest {
-    //private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    //private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+  //private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+  //private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
 
-    /*@Rule
-    public TestRule watcher = new TestWatcher() {
-        protected void starting(Description description) {
-            System.out.println("TEST : " + description.getClassName() +" : " + description.getMethodName());
-        }
-    };*/
-    @Rule
-    public JUnitPrinterRule pr = new JUnitPrinterRule(System.out);
+  /*@Rule
+  public TestRule watcher = new TestWatcher() {
+      protected void starting(Description description) {
+          System.out.println("TEST : " + description.getClassName() +" : " + description.getMethodName());
+      }
+  };*/
+  @Rule
+  public JUnitPrinterRule pr = new JUnitPrinterRule(System.out);
 
-    @Before
-    public void setUp() throws Exception {
-        //System.setOut(new PrintStream(outContent));
-        //System.setErr(new PrintStream(errContent));
-        ChessBoard chess = new ChessBoard();
-    }
+  @Before
+  public void setUp() throws Exception {
+    //System.setOut(new PrintStream(outContent));
+    //System.setErr(new PrintStream(errContent));
+    ChessBoard chess = new ChessBoard();
+  }
 
 
-    @Test
-    public void printChessCoordinates() throws Exception {
-        String coordinates = ChessBoard.getChessCoordinates();
-        assertEquals(coordinates, "* Chess ChessBoard:\n" +
-                                        "*\n" +
-                                        "*      a  b  c  d  e  f  g  h\n" +
-                                        "*\n" +
-                                        "*  8   a8 b8 c8 d8 e8 f8 g8 h8 \n" +
-                                        "*  7   a7 b7 c7 d7 e7 f7 g7 h7 \n" +
-                                        "*  6   a6 b6 c6 d6 e6 f6 g6 h6 \n" +
-                                        "*  5   a5 b5 c5 d5 e5 f5 g5 h5 \n" +
-                                        "*  4   a4 b4 c4 d4 e4 f4 g4 h4 \n" +
-                                        "*  3   a3 b3 c3 d3 e3 f3 g3 h3 \n" +
-                                        "*  2   a2 b2 c2 d2 e2 f2 g2 h2 \n" +
-                                        "*  1   a1 b1 c1 d1 e1 f1 g1 h1 \n");
-    }
+  @Test
+  public void printChessCoordinates() throws Exception {
+    String coordinates = ChessBoard.getChessCoordinates();
+    assertEquals(coordinates, "* Chess ChessBoard:\n" +
+        "*\n" +
+        "*      a  b  c  d  e  f  g  h\n" +
+        "*\n" +
+        "*  8   a8 b8 c8 d8 e8 f8 g8 h8 \n" +
+        "*  7   a7 b7 c7 d7 e7 f7 g7 h7 \n" +
+        "*  6   a6 b6 c6 d6 e6 f6 g6 h6 \n" +
+        "*  5   a5 b5 c5 d5 e5 f5 g5 h5 \n" +
+        "*  4   a4 b4 c4 d4 e4 f4 g4 h4 \n" +
+        "*  3   a3 b3 c3 d3 e3 f3 g3 h3 \n" +
+        "*  2   a2 b2 c2 d2 e2 f2 g2 h2 \n" +
+        "*  1   a1 b1 c1 d1 e1 f1 g1 h1 \n");
+  }
 
-    @Test
-    public void out() {
-        //System.out.print("hello");
-        //assertEquals("hello", outContent.toString());
-    }
+  @Test
+  public void out() {
+    //System.out.print("hello");
+    //assertEquals("hello", outContent.toString());
+  }
 
-    @Test
-    public void err() {
-        //System.err.print("hello again");
-        //assertEquals("hello again", errContent.toString());
-    }
+  @Test
+  public void err() {
+    //System.err.print("hello again");
+    //assertEquals("hello again", errContent.toString());
+  }
 
-    @After
-    public void restoreStreams() {
-        //System.setOut(System.out);
-        //System.setErr(System.err);
-    }
+  @After
+  public void restoreStreams() {
+    //System.setOut(System.out);
+    //System.setErr(System.err);
+  }
 }

@@ -10,35 +10,36 @@ import org.junit.runner.Description;
 
 
 public class TestNameExample {
-    @Rule
-    public final TestName testName = new TestName();
+
+  @Rule
+  public final TestName testName = new TestName();
 
 
-    @Rule
-    public TestRule watcher = new TestWatcher() {
-        protected void starting(Description description) {
-            System.out.println("TEST - " + description.getClassName() +" : " + description.getMethodName());
-        }
-    };
-
-    @Before
-    public void setup() throws Exception {
-        System.out.println("Setup for test '" + testName.getMethodName() + "'");
+  @Rule
+  public TestRule watcher = new TestWatcher() {
+    protected void starting(Description description) {
+      System.out.println("TEST - " + description.getClassName() + " : " + description.getMethodName());
     }
+  };
 
-    @Test
-    public void createTest() {
-    }
+  @Before
+  public void setup() throws Exception {
+    System.out.println("Setup for test '" + testName.getMethodName() + "'");
+  }
 
-    @Test
-    public void retrieveTest() {
-    }
+  @Test
+  public void createTest() {
+  }
 
-    @Test
-    public void updateTest() {
-    }
+  @Test
+  public void retrieveTest() {
+  }
 
-    @Test
-    public void deleteTest() {
-    }
+  @Test
+  public void updateTest() {
+  }
+
+  @Test
+  public void deleteTest() {
+  }
 }
