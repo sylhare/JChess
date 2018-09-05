@@ -59,10 +59,11 @@ Temporary Items
 # =========================
 
 # Some IDE and java auto generated files
-*.iml
+Jchess-dev/.idea/modules/JChess~1.iml
 *.class
-**/.idea/*
+/.idea/*
 
+# Project stuff
 target/*
 jchess/target/*
 jchess/cucumber/node_modules/*
@@ -74,6 +75,11 @@ jchess/out/*
 /build/
 /.gradle/
 cucumber/node_modules/*
-/gradle/*
-/cucumber/default-cucumber-report/*
+/gradle/
+
+# Reports
 /jacoco/
+/cucumber/
+
+
+*.iml

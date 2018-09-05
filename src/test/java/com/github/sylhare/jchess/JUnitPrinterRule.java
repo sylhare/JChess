@@ -1,4 +1,4 @@
-package com.github.sylhare;
+package com.github.sylhare.jchess;
 
 import org.junit.rules.ExternalResource;
 import org.junit.rules.TestRule;

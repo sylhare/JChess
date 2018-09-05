@@ -1,3 +1,6 @@
+group 'com.github.sylhare'
+version '1.0-SNAPSHOT'
+
 buildscript {
     repositories {
         maven {

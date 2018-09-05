@@ -1,4 +1,4 @@
-package com.github.sylhare;
+package com.github.sylhare.jchess;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.*;
