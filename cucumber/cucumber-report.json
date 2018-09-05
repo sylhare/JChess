@@ -1,0 +1,59 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Display the Chess Board",
+        "description": "",
+        "id": "chess;display-the-chess-board",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 95590334,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "A simple game of chess",
+            "match": {
+              "location": "Steps.a_game_of_chess()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat com.github.sylhare.Steps.i_check_the_the_board(Steps.java:23)\n\tat ✽.I check the the board(./src/test/resources/features/Chess.feature:5)\n",
+              "duration": 1601276,
+              "status": "pending"
+            },
+            "line": 5,
+            "name": "I check the the board",
+            "match": {
+              "location": "Steps.i_check_the_the_board()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "the board is displayed",
+            "match": {
+              "location": "Steps.the_board_is_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Chess",
+    "description": "",
+    "id": "chess",
+    "keyword": "Feature",
+    "uri": "./src/test/resources/features/Chess.feature",
+    "tags": []
+  }
+]
