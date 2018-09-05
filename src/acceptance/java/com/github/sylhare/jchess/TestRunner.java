@@ -1,4 +1,4 @@
-package com.github.sylhare;
+package com.github.sylhare.jchess;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
