@@ -7,6 +7,7 @@
 A playable game of chess made in Java. The source for the chess rules is mainly [wikipedia](https://en.wikipedia.org/wiki/Chess).
 I wanted to document properly how to play the game to create the program based on that.
 
+## Start the App
 Build the project using gradle:
 ```bash
 gradle clean build
@@ -14,3 +15,10 @@ gradle clean build
 
 Checkout for more documentation for the game in [docs](/docs)!
 
+## Query the springboot
+
+To check the springboot, you can use curl:
+
+```bash
+curl -vvv -i -X GET localhost:8081
+```
