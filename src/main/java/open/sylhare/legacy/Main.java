@@ -1,4 +1,4 @@
-package legacy;
+package open.sylhare.legacy;
 
 /*
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package legacy;
+package open.sylhare.legacy;
 
 import org.apache.commons.lang3.StringUtils;
 

@@ -1,4 +1,4 @@
-package legacy;
+package open.sylhare.legacy;
 
 /**
  * The ChessPawn class is used to define the pawns of a board

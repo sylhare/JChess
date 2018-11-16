@@ -1,4 +1,4 @@
-package legacy;
+package open.sylhare.legacy;
 
 import java.io.File;
 import java.io.FileNotFoundException;

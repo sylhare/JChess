@@ -1,4 +1,4 @@
-package com.github.sylhare.jchess;
+package open.sylhare.jchess;
 
 import static org.junit.Assert.*;
 

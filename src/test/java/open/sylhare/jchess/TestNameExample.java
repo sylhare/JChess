@@ -1,4 +1,4 @@
-package com.github.sylhare.jchess;
+package open.sylhare.jchess;
 
 import org.junit.Before;
 import org.junit.Rule;
