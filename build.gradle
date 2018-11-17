@@ -52,18 +52,18 @@ test {
 
 bootJar {
     baseName = 'JChess'
-    version =  '1.0.0'
+    version = '1.1.0'
 }
 
 task simpleCucumberReportInstall(type: NpmTask) {
     args = ['--prefix', 'cucumber/', 'install']
 }
 
-task fixVulnerabilities(type: NpmTask, dependsOn: simpleCucumberReportInstall){
+task fixVulnerabilities(type: NpmTask, dependsOn: simpleCucumberReportInstall) {
     args = ['--prefix', 'cucumber/', 'audit', 'fix']
 }
 
-task cucumberReportInstall(type: Exec, dependsOn: fixVulnerabilities){
+task cucumberReportInstall(type: Exec, dependsOn: fixVulnerabilities) {
     commandLine 'echo', "'Cucumber-report-html installed and npm vulnerability fixed (if any)'"
 }
 
@@ -81,6 +81,13 @@ jacocoTestReport {
         html.enabled true
         html.destination "jacoco"
         csv.enabled false
+    }
+
+    // Don't consider "legacy" package in the code coverage
+    afterEvaluate {
+        classDirectories = files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: ['open/sylhare/legacy/**'])
+        })
     }
 }
 

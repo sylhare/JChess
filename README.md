@@ -15,9 +15,9 @@ gradle clean build
 
 Checkout for more documentation for the game in [docs](/docs)!
 
-## Query the springboot
+## Query the API
 
-To check the springboot, you can use curl:
+To check the jchess api locally, you can use curl:
 
 ```bash
 curl -vvv -i -X GET localhost:8081
